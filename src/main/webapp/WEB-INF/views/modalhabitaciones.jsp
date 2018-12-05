@@ -64,30 +64,64 @@
 		</div>
 
 		<div class="form-row">
-			<label>Dias Permanencia:</label> <label class="checkbox-inline">
-				<input type="checkbox" value="">1
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">2
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">3
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">4
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">5
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">6
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">7
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">8
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">9
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="">10
-			</label>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button tabindex="-1" class="btn btn-default" type="button">Permanencia</button>
+							<button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="caret"></span>
+							</button>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Toda la Semana</span></a></li>
+								<li class="divider"></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Lunes</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Martes</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Miercoles</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Jueves</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Viernes</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Sabado</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Domingo</span></a></li>
+							</ul>
+						</div>
+						<input type="text" class="form-control">
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button tabindex="-1" class="btn btn-default" type="button">Aire/Calefaccion</button>
+							<button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="caret"></span>
+							</button>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Toda la Semana</span></a></li>
+								<li class="divider"></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Lunes</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Martes</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Miercoles</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Jueves</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Viernes</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Sabado</span></a></li>
+								<li><a href="#"><input type="checkbox"><span class="lbl"> Domingo</span></a></li>
+							</ul>
+						</div>
+						<input type="text" class="form-control">
+					</div>
 		</div>
 		<div class="form-group">
 			<textarea class="form-control" rows="5" id="comment"></textarea>
 		</div>
 	</div>
+<script>	
+	$(document).ready(function() {
+    $("ul.dropdown-menu input[type=checkbox]").each(function() {
+        $(this).change(function() {
+            var line = "";
+            $("ul.dropdown-menu input[type=checkbox]").each(function() {
+                if($(this).is(":checked")) {
+                    line += $("+ span", this).text() + ";";
+                }
+            });
+            $("input.form-control").val(line);
+        });
+    });
+});
+</script>
 </form>

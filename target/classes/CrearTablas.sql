@@ -126,3 +126,11 @@ CREATE TABLE reghabitaciones (
 -- Permissions
 --ALTER TABLE public.reghabitaciones OWNER TO postgres;
 --GRANT ALL ON TABLE public.reghabitaciones TO postgres;
+------------------Logeo in and out---------
+CREATE TABLE persistent_logins (
+    nombreusuario varchar(64) not null,
+    series varchar(64) not null,
+    token varchar(64) not null,
+    last_used timestamp not null,
+    PRIMARY KEY (series)
+);
