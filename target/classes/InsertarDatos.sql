@@ -19,5 +19,4 @@ VALUES('Smith', 'Ramirez 123', 'pedrito233@gmail.com', 0, 'Sam', 0, 0, '15478774
 
 INSERT INTO usuario_usuario_perfil
 (usuario_id, usuario_perfil_id)
-VALUES(1, 2););
-
+VALUES(1, 2);
