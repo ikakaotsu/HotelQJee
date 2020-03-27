@@ -21,6 +21,15 @@ public class Pais {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(name="code")
+	private int code;
+	
+	@Column(name="iso3166a1")
+	private char iso3166a1;
+	
+	@Column(name="iso3166a2")
+	private char iso3166a2;
+	
 	@Column(name="nombre")
 	private String nombre;
 	
@@ -30,10 +39,15 @@ public class Pais {
 	public Pais() {
 		super();
 	}
+	
+	
 
-	public Pais(int id, String nombre, Set<Provincia> provincias) {
+	public Pais(int id, int code, char iso3166a1, char iso3166a2, String nombre, Set<Provincia> provincias) {
 		super();
 		this.id = id;
+		this.code = code;
+		this.iso3166a1 = iso3166a1;
+		this.iso3166a2 = iso3166a2;
 		this.nombre = nombre;
 		this.provincias = provincias;
 	}
@@ -46,6 +60,30 @@ public class Pais {
 		this.id = id;
 	}
 
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public char getIso3166a1() {
+		return iso3166a1;
+	}
+
+	public void setIso3166a1(char iso3166a1) {
+		this.iso3166a1 = iso3166a1;
+	}
+
+	public char getIso3166a2() {
+		return iso3166a2;
+	}
+
+	public void setIso3166a2(char iso3166a2) {
+		this.iso3166a2 = iso3166a2;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -53,18 +91,13 @@ public class Pais {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+
 	public Set<Provincia> getProvincias() {
 		return provincias;
 	}
 
 	public void setProvincias(Set<Provincia> provincias) {
 		this.provincias = provincias;
-	}
-	
-	public void addProvincia(Provincia p)
-	{
-		provincias.add(p);
 	}
 	
 }

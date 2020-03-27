@@ -53,6 +53,7 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 			entity.setPais(usuario.getPais());
 			entity.setProvincia(usuario.getProvincia());
 			entity.setLocalidad(usuario.getLocalidad());
+			entity.setLocalidad2(usuario.getLocalidad2());
 			entity.setTelefono(usuario.getTelefono());
 			entity.setEmail(usuario.getEmail());
 			entity.setCuil(usuario.getCuil());

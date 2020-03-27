@@ -41,6 +41,7 @@ public class CtaCteServicioImpl implements CtaCteServicio {
 			entity.setPais(ctacte.getPais());
 			entity.setProvincia(ctacte.getProvincia());
 			entity.setLocalidad(ctacte.getLocalidad());
+			entity.setLocalidad2(ctacte.getLocalidad2());
 			entity.setTelefono(ctacte.getTelefono());
 			entity.setEmail(ctacte.getEmail());
 			entity.setCuit(ctacte.getCuit());

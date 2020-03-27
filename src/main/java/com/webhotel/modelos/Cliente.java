@@ -1,11 +1,13 @@
 package com.webhotel.modelos;
 
 import java.io.Serializable;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate; 
 
 @Entity
 @Table(name = "CLIENTE")
@@ -23,15 +25,17 @@ public class Cliente extends Persona implements Serializable {
 	private int estado_civil;
 	@Column(name = "OCUPACION")
 	private String ocupacion;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Column(name = "FECHANACIMIENTO")
-	private Date fechanacimiento;
+	private LocalDate fechanacimiento;
 
 	// Constructor
 	public Cliente() {
 		super();
 	}
 
-	public Cliente(int tipo_documento, String nro_documento, int estado_civil, String ocupacion, Date fechanacimiento) {
+	public Cliente(int tipo_documento, String nro_documento, int estado_civil, String ocupacion,
+			LocalDate fechanacimiento) {
 		super();
 		this.tipo_documento = tipo_documento;
 		this.nro_documento = nro_documento;
@@ -72,15 +76,16 @@ public class Cliente extends Persona implements Serializable {
 		this.ocupacion = ocupacion;
 	}
 
-	public Date getFechanacimiento() {
+	public LocalDate getFechanacimiento() {
 		return fechanacimiento;
 	}
 
-	public void setFechanacimiento(Date fechanacimiento) {
+	public void setFechanacimiento(LocalDate fechanacimiento) {
 		this.fechanacimiento = fechanacimiento;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
 }

@@ -21,6 +21,10 @@ import com.webhotel.modelos.UsuarioPerfil;
 @Table(name="USUARIO")
 public class Usuario extends Persona implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6628659264260637213L;
 	@Column(name="CUIL")
 	private int cuil;
 	@Column(name="CATEGORIA")

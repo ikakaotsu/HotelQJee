@@ -40,6 +40,7 @@ public class ClienteServicioImpl implements ClienteServicio {
 			entity.setProvincia(cliente.getProvincia());
 			entity.setLocalidad(cliente.getLocalidad());
 			entity.setTelefono(cliente.getTelefono());
+			entity.setLocalidad2(cliente.getLocalidad2());
 			entity.setEmail(cliente.getEmail());
 			
 			entity.setTipo_documento(cliente.getTipo_documento());

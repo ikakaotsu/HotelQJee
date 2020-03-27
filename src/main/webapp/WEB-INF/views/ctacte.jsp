@@ -138,21 +138,17 @@
 									</div>
 							</div>
 						</div>
-				
+										
 						<div class="row">
 							<div class="form-group col-md-12">
-								<label class="col-md-3 control-lable" for="Localidad">Localidad</label>
-									<div class="col-md-7">
-										<form:select path="localidad" id="Localidad">
-											<form:option value="-1" label="Seleccionar Localidad"/>
-											<c:if test="${editar}">
-											<form:options items="${localidades}" itemValue="id" itemLabel="nombre" class="form-control imput-sm"/>
-											</c:if>
-										</form:select>
-										<div class="has-error">
-											<form:errors path="localidad" class="help-inline"/>
-										</div>
+								<label class="col-md-3 control-lable" for="Localidad">Localidad2</label>
+								<div class="col-md-7">
+									<form:input type="text" path="localidad2" id="Localidad2"
+										class="form-control input-sm" />
+									<div class="has-error">
+										<form:errors path="localidad2" class="help-inline" />
 									</div>
+								</div>
 							</div>
 						</div>
 						

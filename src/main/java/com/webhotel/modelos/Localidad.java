@@ -19,19 +19,27 @@ public class Localidad {
 	@Column(name="nombre")
 	private String nombre;
 	
+	@Column(name="cpostal")
+	private int cpostal;
+	
 	@Column(name="provincia_id")
 	private int provincia_id;
 	
 	public Localidad() {
 		super();
 	}
+	
+	
 
-	public Localidad(int id, String nombre, int provincia_id) {
+	public Localidad(int id, String nombre, int cpostal, int provincia_id) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
+		this.cpostal = cpostal;
 		this.provincia_id = provincia_id;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -49,6 +57,14 @@ public class Localidad {
 		this.nombre = nombre;
 	}
 
+	public int getCpostal() {
+		return cpostal;
+	}
+
+	public void setCpostal(int cpostal) {
+		this.cpostal = cpostal;
+	}
+
 	public int getProvincia_id() {
 		return provincia_id;
 	}
@@ -56,5 +72,7 @@ public class Localidad {
 	public void setProvincia_id(int provincia_id) {
 		this.provincia_id = provincia_id;
 	}
+
+
 	
 }

@@ -26,6 +26,8 @@ public abstract class Persona {
 	private int provincia;
 	@Column(length=60)
 	private int localidad;
+	@Column(length=100)
+	private String localidad2;
 	@Column(length=60)
 	private String telefono;
 	@Column(length=60)
@@ -36,8 +38,8 @@ public abstract class Persona {
 		super();
 	}
 
-public Persona(int id, String nombre, String apellido, String domicilio, int pais, int provincia, int localidad,
-		String telefono, String email) {
+	public Persona(int id, String nombre, String apellido, String domicilio, int pais, int provincia, int localidad,
+		String localidad2, String telefono, String email) {
 	super();
 	this.id = id;
 	this.nombre = nombre;
@@ -46,80 +48,90 @@ public Persona(int id, String nombre, String apellido, String domicilio, int pai
 	this.pais = pais;
 	this.provincia = provincia;
 	this.localidad = localidad;
+	this.localidad2 = localidad2;
 	this.telefono = telefono;
 	this.email = email;
 }
 
-public int getId() {
-	return id;
-}
+	public int getId() {
+		return id;
+	}
 
-public void setId(int id) {
-	this.id = id;
-}
+	public void setId(int id) {
+		this.id = id;
+	}
 
-public String getNombre() {
-	return nombre;
-}
+	public String getNombre() {
+		return nombre;
+	}
 
-public void setNombre(String nombre) {
-	this.nombre = nombre;
-}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-public String getApellido() {
-	return apellido;
-}
+	public String getApellido() {
+		return apellido;
+	}
 
-public void setApellido(String apellido) {
-	this.apellido = apellido;
-}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
 
-public String getDomicilio() {
-	return domicilio;
-}
+	public String getDomicilio() {
+		return domicilio;
+	}
 
-public void setDomicilio(String domicilio) {
-	this.domicilio = domicilio;
-}
+	public void setDomicilio(String domicilio) {
+		this.domicilio = domicilio;
+	}
 
-public int getPais() {
-	return pais;
-}
+	public int getPais() {
+		return pais;
+	}
 
-public void setPais(int pais) {
-	this.pais = pais;
-}
+	public void setPais(int pais) {
+		this.pais = pais;
+	}
 
-public int getProvincia() {
-	return provincia;
-}
+	public int getProvincia() {
+		return provincia;
+	}
 
-public void setProvincia(int provincia) {
-	this.provincia = provincia;
-}
+	public void setProvincia(int provincia) {
+		this.provincia = provincia;
+	}
 
-public int getLocalidad() {
-	return localidad;
-}
+	public int getLocalidad() {
+		return localidad;
+	}
 
-public void setLocalidad(int localidad) {
-	this.localidad = localidad;
-}
+	public void setLocalidad(int localidad) {
+		this.localidad = localidad;
+	}
 
-public String getTelefono() {
-	return telefono;
-}
+	public String getLocalidad2() {
+		return localidad2;
+	}
 
-public void setTelefono(String telefono) {
-	this.telefono = telefono;
-}
+	public void setLocalidad2(String localidad2) {
+		this.localidad2 = localidad2;
+	}
 
-public String getEmail() {
-	return email;
-}
+	public String getTelefono() {
+		return telefono;
+	}
 
-public void setEmail(String email) {
-	this.email = email;
-}
-	
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
 }
