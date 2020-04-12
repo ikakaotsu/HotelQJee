@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Table(name="USUARIO_PERFIL")
 public class UsuarioPerfil implements Serializable{
 
+
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;	
 

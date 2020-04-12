@@ -1,6 +1,6 @@
 package com.webhotel.modelos;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,9 +19,9 @@ public class RegHabitaciones {
 	@Column(name="codcliente")
 	private int codcliente;
 	@Column(name="fyhingreso")
-	private Date fyhingreso;
+	private LocalDate fyhingreso;
 	@Column(name="fyhegreso")
-	private Date fyhegreso;
+	private LocalDate fyhegreso;
 	@Column(name="nrohabitacion")
 	private String nrohabitacion;
 	@Column(name="flag")
@@ -33,8 +33,7 @@ public class RegHabitaciones {
 		// TODO Auto-generated constructor stub
 	}
 
-
-	public RegHabitaciones(int id, int codcliente, Date fyhingreso, Date fyhegreso, String nrohabitacion,
+	public RegHabitaciones(int id, int codcliente, LocalDate fyhingreso, LocalDate fyhegreso, String nrohabitacion,
 			boolean flag) {
 		super();
 		this.id = id;
@@ -44,6 +43,8 @@ public class RegHabitaciones {
 		this.nrohabitacion = nrohabitacion;
 		this.flag = flag;
 	}
+
+
 
 
 	public int getId() {
@@ -66,22 +67,22 @@ public class RegHabitaciones {
 	}
 
 
-	public Date getFyhingreso() {
+	public LocalDate getFyhingreso() {
 		return fyhingreso;
 	}
 
 
-	public void setFyhingreso(Date fyhingreso) {
+	public void setFyhingreso(LocalDate fyhingreso) {
 		this.fyhingreso = fyhingreso;
 	}
 
 
-	public Date getFyhegreso() {
+	public LocalDate getFyhegreso() {
 		return fyhegreso;
 	}
 
 
-	public void setFyhegreso(Date fyhegreso) {
+	public void setFyhegreso(LocalDate fyhegreso) {
 		this.fyhegreso = fyhegreso;
 	}
 
@@ -104,4 +105,5 @@ public class RegHabitaciones {
 	public void setFlag(boolean flag) {
 		this.flag = flag;
 	}
+	
 }
