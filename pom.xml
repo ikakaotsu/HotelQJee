@@ -165,7 +165,7 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
-                 <plugin>
+            <!--      <plugin>
         				<groupId>com.heroku.sdk</groupId>
         				<artifactId>heroku-maven-plugin</artifactId>
         				<version>3.0.3</version>
@@ -192,8 +192,8 @@
                     		</configuration>
                 		</execution>
             		</executions>
-        		</plugin>
-            </plugins>
+        		</plugin> -->
+            </plugins> 
         </pluginManagement>
         <finalName>proyectoHotel</finalName>
     </build>
