@@ -171,8 +171,7 @@
         				<version>3.0.3</version>
         				<configuration>
   						<appName>hotelqjee</appName>
-						</configuration>
-        				
+						</configuration>		
       			</plugin>
             </plugins>
         </pluginManagement>
